@@ -1,0 +1,131 @@
+nav.navbar{
+    border-bottom: 1px solid #DEE5ED;
+    height: 72px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+ 
+#logo{  
+    width: 80px;
+    height: 50px;
+}
+
+li.nav-item{
+    white-space: nowrap;
+}
+
+a.nav-link{
+    color : #486284;
+    font-size: 20px;
+}
+
+.nav-login_join{
+    gap : 15px;
+}
+
+button.btn-login,
+button.btn-join{
+    border-radius: 50px;
+    border-color: #486284;
+}
+
+button.btn-login{
+    color: #486284;
+}
+
+button.btn-join{
+    background-color: #486284;
+}
+
+
+@media (max-width: 768px){
+    ul.nav-login_join{
+        display: none;
+    }
+}
+
+@media (max-width: 577px){
+    ul.nav{
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    
+
+    .nav-logo{
+        flex-direction: column;
+    }
+}
+
+.page-name{
+    display: inline-block;
+    font-size: 60px;
+    color:#486284;
+    font-weight:bold;
+    margin: 49px 110px 88px;
+    white-space: nowrap;
+}
+
+.search-set{
+    display: flex;
+    gap: 10px;
+    margin: auto 169px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 69px;
+}
+
+#floatingSelect{
+    width: 150px;
+    padding-top : 18px;
+    padding-bottom: 18px;
+    color: gray;
+}
+
+#floatingSelect,
+input.form-control,
+#button-addon2{
+    border-radius: 0;
+    border: 1.5px solid #486284;
+}
+
+.input-group{
+    height: 58px;
+}
+
+
+#button-addon2{
+    background-color: #486284;
+}
+
+#search-input{
+    height: 58px;
+}
+
+div.service-card{
+    margin: 0px 169px 100px;
+}
+
+#targetName{
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+div.card{
+    height: 13rem;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color: #F0F4F8;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(196, 189, 189, 0.3);
+}
+
+h5.card-title{
+    font-weight: bold;
+}
+
+h6.card-subtitle{
+    padding-top: 12px;
+    padding-bottom: 22px;
+}

@@ -172,8 +172,8 @@ body, html {
 }
 
 .service-box {
-  width: 800px;
-  height: 300px;
+  width: 900px;
+  height: 400px;
   background-color: #F0F4F8;
   margin: 0 auto;
   display: flex;

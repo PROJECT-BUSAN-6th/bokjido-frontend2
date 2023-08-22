@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 nav.navbar{
     border-bottom: 1px solid #DEE5ED;
     height: 72px;
@@ -103,9 +107,11 @@ input.form-control,
     height: 58px;
 }
 
-div.service-card{
-    margin: 0px 169px 100px;
+.service-card{
+    margin: 0 169px;
 }
+
+
 
 #targetName{
     font-size: 15px;
@@ -123,9 +129,21 @@ div.card{
 
 h5.card-title{
     font-weight: bold;
+    color: black;
 }
 
 h6.card-subtitle{
     padding-top: 12px;
     padding-bottom: 22px;
 }
+
+.service-card-link{
+    text-decoration: none;
+}
+
+/* 페이지네이션 */
+ul.pagination{
+    justify-content: center;
+
+}
+

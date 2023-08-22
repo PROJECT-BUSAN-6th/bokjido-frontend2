@@ -21,10 +21,13 @@
             <!-- 메뉴 -->
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">서비스 찾기</a>
+                  <a class="nav-link active" aria-current="page" href="./bokjido_service.html">복지서비스 찾기</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">복지건물 찾기</a>
+                  <a class="nav-link" href="./bokjido_facilityInfo.html">복지시설 찾기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">게시판</a>
                 </li>
             </ul>
 
@@ -41,9 +44,11 @@
     </nav>
 
     <!-- 서비스명 -->
-    <span class="page-name">
+    <button class="page-name" onclick="location.href='./bokjido_service.html'"
+    style="border:none; background-color:#fff">
         복지 서비스 찾기
-    </span>
+    </button>
+
 
     <!-- 서비스 블럭-->
     <div class="block-service">
@@ -144,7 +149,7 @@
 
         <!-- 목록 버튼 -->
         <div class="btn-list">
-            <a class="btn btn-primary" id="list-btn2" href="#" role="button">목록</a>
+            <a class="btn btn-primary" id="list-btn2" href="./bokjido_service.html" role="button">목록</a>
         </div>
 
         <!-- 모달창 -->

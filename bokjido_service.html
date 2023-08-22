@@ -21,17 +21,20 @@
             <!-- 메뉴 -->
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">서비스 찾기</a>
+                  <a class="nav-link active" aria-current="page" href="./bokjido_service.html">복지서비스 찾기</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">복지건물 찾기</a>
+                  <a class="nav-link" href="./bokjido_facilityInfo.html">복지시설 찾기</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">게시판</a>
+              </li>
             </ul>
 
             <!-- 로그인/회원가입 -->
             <ul class="nav justify-content-end nav-login_join">
                 <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary btn-login">로그인</button>
+                    <button type="button" class="btn btn-outline-primary btn-login" onclick="location.href='#' ">로그인</button>
                 </li>
                 <li class="nav-item">
                     <button type="button" class="btn btn-primary btn-join">회원가입</button>
@@ -41,9 +44,10 @@
     </nav>
 
     <!-- 서비스명 -->
-    <span class="page-name">
+    <button class="page-name" onClick="window.location.reload()"
+    style="border:none; background-color:#fff">
         복지 서비스 찾기
-    </span>
+    </button>
 
     <!-- 검색창 -->
     <div class="search-set">
@@ -76,10 +80,11 @@
 
     <!-- 서비스 카드 -->
     <div class="container text-left service-card">
-        <div class="row">
+        <div class="row row-cols-xxl-4 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
 
           <div class="col">
             <div class="card" style="width: 18rem;">
+              <a  class=service-card-link href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -89,11 +94,13 @@
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
                 </div>
+              </a>  
             </div>
           </div>
 
           <div class="col">
             <div class="card" style="width: 18rem;">
+              <a  class=service-card-link href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -103,25 +110,13 @@
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
                 </div>
+              </a>  
             </div>
           </div>
 
           <div class="col">
             <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">서비스명</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    <img src="./images/serviceTarget.svg">
-                    신청대상
-                    <span id="targetName">대상명</span>
-                  </h6>
-                  <p class="card-text text-center" style="color:#486284">------------------서비스 설명---------</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card" style="width: 18rem;">
+              <a  class=service-card-link href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -131,11 +126,13 @@
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
                 </div>
+              </a>  
             </div>
           </div>
 
           <div class="col">
             <div class="card" style="width: 18rem;">
+              <a  class=service-card-link href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -145,11 +142,13 @@
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
                 </div>
+              </a>  
             </div>
           </div>
 
           <div class="col">
             <div class="card" style="width: 18rem;">
+              <a  class=service-card-link href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -159,11 +158,13 @@
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
                 </div>
+              </a>  
             </div>
           </div>
 
           <div class="col">
             <div class="card" style="width: 18rem;">
+              <a  class=service-card-link href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -173,11 +174,13 @@
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
                 </div>
+              </a>  
             </div>
           </div>
 
           <div class="col">
             <div class="card" style="width: 18rem;">
+              <a  class=service-card-link href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -187,25 +190,12 @@
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
                 </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">서비스명</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    <img src="./images/serviceTarget.svg">
-                    신청대상
-                    <span id="targetName">대상명</span>
-                  </h6>
-                  <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>
-                </div>
+              </a>  
             </div>
           </div>
 
         </div>
-    </div>    
+      </div>    
 
     <!-- 페이지네이션 -->
     <nav aria-label="Page navigation example">

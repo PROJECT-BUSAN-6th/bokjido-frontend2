@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let storeK=[];
     let storeC=[];
     let storeP=[];
-
+ 
     //클릭 이벤트 리스너 친절 등록
 		rateK.addEventListener('click',function(e){
 			let elem = e.target;

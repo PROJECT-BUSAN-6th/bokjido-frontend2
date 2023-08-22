@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 nav.navbar{
     border-bottom: 1px solid #DEE5ED;
     height: 72px;

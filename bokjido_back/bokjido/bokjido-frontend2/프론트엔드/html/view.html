@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="icon" href="/프론트엔드/image/favicon.jpg">
+    <title>복지도-게시판</title>
+    <link rel="stylesheet" href="/프론트엔드/css/css.css">
+</head>
+<body>
+    <!-- 헤더 --> 
+  <header>
+    <div class="inner">
+      <a href="/프론트엔드/index.html" class="logo">
+        <img src="/프론트엔드/image/logo.png" alt="bokjido">
+      </a>
+      <div class="sub-title">
+        <ul class="top-line">
+          <li>
+            <a href="/프론트엔드/html/bokjido_service.html">서비스 검색</a>
+          </li>
+          <li>
+            <a href="/프론트엔드/html/bokjido_facilityInfo.html">지도 검색</a>
+          </li>
+          <li>
+            <a href="/프론트엔드/html/list.html">게시판</a>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <a id="loginButton" href="/프론트엔드/sign_in.html">
+            <img src="/프론트엔드/image/sign_in.png" alt="로그인" class="button-img">
+        </a>
+        <a id="mypageButton" class="test" href="/프론트엔드/html/mypage.html">
+            <img src="/프론트엔드/image/mypage.png" alt="나의정보" class="button-img">
+        </a>
+        <a id="signUpButton" href="/프론트엔드/sign_up.html">
+            <img src="/프론트엔드/image/sign_up.png" alt="회원가입" class="button-img">
+        </a>
+        <a id="logoutButton" href="#">
+            <img src="/프론트엔드/image/logout.png" alt="로그아웃">
+        </a>
+    </div>
+  </div>
+      
+  </header>
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>게시판</strong>
+            <p>궁금한 사항을 빠르고 정확하게 안내해드립니다.</p>
+        </div>
+        <div class="board_view_wrap">
+          <div class="board_view">
+              <div class="title">
+                  게시글 제목이 여기에 들어갑니다.
+              </div>
+              <div class="info">
+                  <dl>
+                      <dt>번호</dt>
+                      <dd>1</dd>
+                  </dl>
+                  <dl>
+                      <dt>글쓴이</dt>
+                      <dd>작성자 이름</dd>
+                  </dl>
+                  <dl>
+                      <dt>작성일</dt>
+                      <dd>2023-08-24</dd>
+                  </dl>
+                  <dl>
+                      <dt>조회</dt>
+                      <dd>100</dd>
+                  </dl>
+              </div>
+              <div class="cont">
+                  게시글 내용이 여기에 들어갑니다.
+              </div>
+              
+              <!-- 댓글 영역 -->
+              <div class="comments">
+                  <h3>댓글</h3>
+                  <div class="comment">
+                      <strong>댓글 작성자</strong>: 댓글 내용이 여기에 들어갑니다.
+                  </div>
+                  <div class="comment">
+                      <strong>댓글 작성자</strong>: 댓글 내용이 여기에 들어갑니다.
+                  </div>
+                  <!-- 추가 댓글이 있을 경우, 위와 같이 구성될 수 있음 -->
+                  
+                  <!-- 댓글 작성 폼 -->
+                  <div class="comment-form">
+                      <form>
+                          <label for="commentAuthor">작성자</label>
+                          <input type="text" id="commentAuthor" placeholder="작성자 이름">
+                          <label for="commentContent">댓글 내용</label>
+                          <textarea id="commentContent" placeholder="댓글을 입력하세요"></textarea>
+                          <button type="submit">댓글 작성</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+            </div>
+            <div class="bt_wrap">
+                <a href="/프론트엔드/html/list.html" class="on">목록</a>
+                <a href="/프론트엔드/html/edit.html">수정</a>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+
+  <div id="footer">
+    <div class="container">
+       <h2 class="ir_su"></h2>
+          <div class="footer">
+             <ul>
+               <li><a href="#">사이트 도움말</a></li>
+               <li><a href="#">사이트 이용약관</a></li>
+               <li><a href="#">사이트 운영규칙</a></li>
+               <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+               <li><a href="#">책임의 한계와 법적고지</a></li>
+               <li><a href="#">게시중단요청 서비스</a></li>
+               <li><a href="#">고객센터</a></li>
+              </ul>
+              <div class="w3c">
+                 <a href="https://www.mohw.go.kr/react/index.jsp">
+                     <img src="/프론트엔드/image/bokjibo.png" alt="Valid XHTML 1.0 Transitional" height="40" width="130" />
+                 </a>
+                 <a href="https://m.bokjiro.go.kr/ssis-tem/index.do">
+                  <img src="/프론트엔드/image/bokjiro.jpg" alt="Valid XHTML 1.0 Transitional" height="40" width="130" />
+                 </a>
+                 <a href="http://www.ssis.or.kr/index.do">
+                     <img style="border:0;width:130px;height:40px;margin: left -10px;" src="/프론트엔드/image/ssis.jpg" alt="올바른 CSS입니다!" />
+                 </a>
+              </div>
+              <address>
+                Copyright&copy;webstoryboy.co.kr All Right Rederved
+             </address>
+           </div>
+
+    </div>
+
+</div>
+<script>
+  // 댓글 데이터를 저장하는 배열
+  const comments = [];
+
+  // 댓글을 보여주는 함수
+  function displayComments() {
+      const commentContainer = document.getElementById("commentContainer");
+      commentContainer.innerHTML = "";
+
+      comments.forEach((comment, index) => {
+          const commentDiv = document.createElement("div");
+          commentDiv.className = "comment";
+          commentDiv.innerHTML = `<strong>${comment.author}</strong>: ${comment.content}`;
+          commentContainer.appendChild(commentDiv);
+      });
+  }
+
+  // 댓글 작성 폼 제출 시 처리
+  document.getElementById("commentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const authorInput = document.getElementById("commentAuthor");
+      const contentInput = document.getElementById("commentContent");
+
+      const author = authorInput.value;
+      const content = contentInput.value;
+
+      if (author.trim() === "" || content.trim() === "") {
+          alert("이름과 댓글 내용을 입력해주세요.");
+          return;
+      }
+
+      const newComment = {
+          author,
+          content
+      };
+
+      comments.push(newComment);
+
+      // 댓글 추가 후 입력 필드 초기화
+      authorInput.value = "";
+      contentInput.value = "";
+
+      displayComments();
+  });
+
+  // 초기 댓글 보여주기
+  displayComments();
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+/* 공통 스타일 */
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  img{
+    /* img 하단에 Baseline 공백을 제거 */
+    display: block;
+  }
+  
+  /* 내부 컨테이너 스타일 */
+  .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* 헤더 스타일 */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    background-color: white;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  header > .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  }
+  header .sub-title {
+    display: flex;
+    align-items: center;
+  }
+  header .sub-title ul.top-line {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  header .sub-title ul.top-line li {
+    text-align: center;
+    position: relative;
+  }
+  header .sub-title ul.top-line li::before {
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  header .sub-title ul.top-line li:first-child::before {
+    display: none;
+  }
+  header .sub-title ul.top-line li a {
+    padding: 20px 30px;
+    display: block;
+    font-size: 25px;
+    color: #486284;
+    text-align: center;
+  }
+  header .sub-title ul.top-line li a:hover {
+    color: #000;
+  }
+  header .btn-group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  /* "나의정보" 및 "로그아웃" 버튼은 처음에는 숨김 처리 */
+#mypageButton,
+#logoutButton {
+    display: none;
+}
+
+.page-name{
+    display: inline-block;
+    font-size: 60px;
+    color:#486284;
+    font-weight:bold;
+    margin: 49px 110px 88px;
+    white-space: nowrap;
+    margin-top: 200px;
+}
+
+
+.block-service{
+    border: 1px solid #ACB1C6;
+    margin: auto 169px;
+    padding: 45px 90px;
+}
+
+.serviceName{
+    font-size: 45px;
+    color:#486284;
+    font-weight:bold;
+}
+
+.service-ex{
+    color: grey;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+ul.nav-tabs{
+    margin: auto 169px;
+}
+
+.tab-btn{
+    width: 50%;
+    text-align: center;
+    color: #486284;
+    font-weight: bold;
+    height: 50px;
+    
+}
+
+#info-tab,
+#review-tab{
+    width: 100%;
+    height: 100%;
+    color: #486284;
+    border: 0;
+}
+
+#info-tab:focus,
+#review-tab:focus{
+    background-color: #F0F4F8;
+    transition: all 0.5s;
+}
+
+
+
+#info-tab-pane,
+#review-tab-pane{
+    background-color: #F0F4F8;
+    margin: 0 169px;
+}
+
+.infoBlock{
+    margin-bottom: 30px;
+    padding: 40px 80px;
+    height: 789px;
+    overflow: scroll;
+}
+
+.serviceInfo-set{
+    margin: 60px 0;
+}
+
+.tab-titleSet{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tab-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.serviceContent{
+    margin: 10px 37px;
+}
+
+button.btn-review{
+    float: right;
+    border: 1.5px solid #486284;
+    color: #486284;
+}
+
+button.btn-review:hover{
+    background-color: #486284;
+    color: white;
+}
+
+.block-btn{
+    margin-bottom: 20px;
+}
+
+.profile{
+    border-radius: 50%;
+    border: 1px solid gray;
+    width: 46px;
+    height: 46px;
+
+}
+
+div.row-review{
+    padding: 0 60px;
+    margin-bottom: 10px;
+
+}
+
+div.review-card{
+    border: none;
+    box-shadow: 3px 3px 3px rgba(196, 189, 189, 0.3);
+    border-radius: 15px;
+}
+
+.person-name{
+    color: #486284;
+    font-size: 25px;
+    padding-bottom: 6px;
+}
+
+.person{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.review-content{
+    margin: 10px 58px;
+    color: grey;
+}
+
+.write-date{
+    float: right;
+    color: #486284;
+}
+
+.btn-list{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#list-btn2{
+    width: 100px;
+    background-color: #486284;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* 모달 창 */
+.modal-content{
+    height: 70%;
+}
+
+#staticBackdropLabel{
+    font-weight:500;
+}
+
+div.form-block{
+    height: 100%;
+}
+
+#exampleFormControlTextarea1{
+    height: 200px;
+    background-color: #F0F4F8;
+    font-size: larger;
+}
+
+button.btn-submit{
+    background-color: #486284;
+    width: 40%;
+}
+
+/* 셀렉트 박스 */
+.review-select{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+#floatingSelect{
+    width: 25%;
+    height: 38px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    color: gray;
+}
+
+.div-search-Service{
+    align-items: center;
+    height: 38px;
+
+}
+
+/* 목록 스크롤 */
+.service-sel{
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.15s;
+}
+
+/* 서비스상자 보여주기 */
+.show-selBox{
+    display: block;
+    overflow: scroll;
+    height: 124px;
+}
+
+/* 리뷰 폼 */
+.service-reviewText{
+    margin-top: 25px;
+}
+
+/* 리뷰-서비스명 */
+.review-service{
+    display: flex;
+    border: 1px solid #486284;
+    border-radius: 50px;
+    margin: 10px 58px;
+    width: fit-content;
+    justify-content: center;
+    
+}
+
+button.review-serviceName{
+    color: #486284;
+}

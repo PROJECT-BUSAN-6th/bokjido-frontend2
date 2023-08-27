@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/프론트엔드/css/sign.css">
+  <script src="/프론트엔드/js/sign.js"></script>
+  <!--favicon-->
+  <link rel="icon" href="/프론트엔드/image/favicon.jpg">
+  <title>복지도-로그인</title>
+</head>
+<body>
+  <div class="login-form">
+    <div class="logo">
+        <img src="/프론트엔드/image/logo.png" alt="복지도">
+    </div>
+    <form>
+      <input type="text" id="email" class="text-field" placeholder="아이디">
+      <input type="password" id="password" class="text-field" placeholder="비밀번호">
+      <input type="submit" value="로그인" class="submit-btn" id="loginBtn">
+    </form>
+
+    <div class="links">
+      <a href="/프론트엔드/sign_up.html">회원가입</a><br>
+      <a href="#">비밀번호를 잊어버리셨나요?</a>
+    </div>
+  </div>
+  
+  <script>
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
+
+    function checkInputs() {
+      const emailValue = emailInput.value.trim();
+      const passwordValue = passwordInput.value.trim();
+
+      if (emailValue !== '' && passwordValue !== '') {
+        loginBtn.style.backgroundColor = "#0095F6";
+        loginBtn.disabled = false;
+      } else {
+        loginBtn.style.backgroundColor = "#C0DFFD";
+        loginBtn.disabled = true;
+      }
+    }
+
+    loginBtn.addEventListener('click', function(event) {
+      const emailValue = emailInput.value.trim();
+      const passwordValue = passwordInput.value.trim();
+
+      // 여기서 아이디와 비밀번호를 설정하고자 하는 값으로 변경해주세요.
+      const correctEmail = 'yourUsername'; 
+      const correctPassword = 'yourPassword';
+
+      if (emailValue === 'yourUsername' && passwordValue === 'yourPassword') {
+        // 올바른 아이디와 비밀번호일 경우 index.html로 이동
+        window.location.href = 'index.html';
+      } else {
+        // 아이디나 비밀번호가 올바르지 않을 경우에 대한 처리
+        alert('아이디나 비밀번호가 올바르지 않습니다.');
+      }
+
+      event.preventDefault(); // 폼 제출 기본 동작 차단
+    });
+
+    emailInput.addEventListener('keyup', checkInputs);
+    passwordInput.addEventListener('keyup', checkInputs);
+  </script>
+</body>
+</html>

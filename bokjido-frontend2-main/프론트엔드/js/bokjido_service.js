@@ -46,7 +46,7 @@ btnSearch.addEventListener('click', () => {
                 localStorage.setItem("reqData", objData); //변경
             });
         }
-        
+         
     })
     .catch(error => {
         console.log(error);

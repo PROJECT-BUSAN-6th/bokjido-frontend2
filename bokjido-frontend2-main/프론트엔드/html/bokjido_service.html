@@ -26,13 +26,13 @@
       <div class="sub-title">
         <ul class="top-line">
           <li>
-            <a href="/프론트엔드/html/bokjido_service.html">서비스 검색</a>
+            <a href="/프론트엔드/html/bokjido_service.html" style="text-decoration: none">서비스 검색</a>
           </li>
           <li>
-            <a href="/프론트엔드/html/bokjido_facilityInfo.html">지도 검색</a>
+            <a href="/프론트엔드/html/bokjido_maps.html" style="text-decoration: none">지도 검색</a>
           </li>
           <li>
-            <a href="/프론트엔드/html/list.html">게시판</a>
+            <a href="/프론트엔드/html/list.html" style="text-decoration: none">게시판</a>
           </li>
         </ul>
       </div>
@@ -92,9 +92,9 @@
         </div>
 
         <div class="input-group  mb-3" >
-            <input type="text" id="keywordTxT"class="form-control" placeholder="키워드/서비스명" aria-label="키워드/서비스명" aria-describedby="button-addon2">
+            <input type="text" id="keywordTxT" class="form-control" placeholder="키워드/서비스명" aria-label="키워드/서비스명" aria-describedby="button-addon2">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                <img src="./images/magnifier_icon.svg" id="magnifier_icon">
+                <img src="/프론트엔드/image/magnifier_icon.svg" id="magnifier_icon">
             </button>
         </div>
     </div>
@@ -105,14 +105,14 @@
         <div class="row row-cols-xxl-4 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1"
            id="cardGridRow">
 
-          <!-- <div class="col">
+          <!--<div class="col">
             <div class="card sel-cd" style="width: 18rem;">
               <a class="service-card-link" data-value='id' href="./bokjido_serviceInfo.html">
                 <div class="card-body">
                   <h5 class="card-title">서비스명</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
-                    <img src="./images/serviceTarget.svg">
-                    신청대상
+                    <img src="/프론트엔드/image/serviceTarget.svg">
+                    <span id="target">신청대상</span>
                     <span id="targetName">대상명</span>
                   </h6>
                   <p class="card-text text-center" style="color:grey">------------------서비스 설명---------</p>

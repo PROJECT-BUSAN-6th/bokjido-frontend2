@@ -85,6 +85,10 @@ header .btn-group {
   display: none;
 }
 
+.button-img{
+  margin-right: 10px;
+}
+
 .page-name{
   display: inline-block;
   font-size: 60px;
@@ -109,7 +113,11 @@ header .btn-group {
   width: 150px;
   padding-top : 18px;
   padding-bottom: 18px;
-  color: gray;
+  color: #333;
+}
+
+#keywordTxT::placeholder{
+  color: #333;
 }
 
 #locality,
@@ -137,8 +145,6 @@ input.form-control,
   margin: 0 169px;
 }
 
-
-
 #targetName{
   font-size: 15px;
   padding-left: 15px;
@@ -159,8 +165,15 @@ h5.card-title{
 }
 
 h6.card-subtitle{
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding-top: 12px;
   padding-bottom: 22px;
+}
+
+#target{
+  font-weight: 550;
 }
 
 .service-card-link{

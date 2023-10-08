@@ -80,6 +80,12 @@ header .btn-group {
   flex-direction: row;
 }
 
+/* "나의정보" 및 "로그아웃" 버튼은 처음에는 숨김 처리 */
+#mypageButton,
+#logoutButton {
+    display: none;
+}
+
 .button-img {
   margin-right: 10px;
   transition: filter 0.3s; /* 마우스 호버 효과를 부드럽게 하기 위한 트랜지션 설정 */

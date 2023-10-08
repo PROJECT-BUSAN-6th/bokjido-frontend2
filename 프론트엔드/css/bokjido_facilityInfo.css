@@ -1,0 +1,548 @@
+/* 공통 스타일 */
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  img{
+    /* img 하단에 Baseline 공백을 제거 */
+    display: block;
+  }
+  
+  /* 내부 컨테이너 스타일 */
+  .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* 헤더 스타일 */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    background-color: white;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  header > .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  }
+  header .sub-title {
+    display: flex;
+    align-items: center;
+  }
+  header .sub-title ul.top-line {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  header .sub-title ul.top-line li {
+    text-align: center;
+    position: relative;
+  }
+  header .sub-title ul.top-line li::before {
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  header .sub-title ul.top-line li:first-child::before {
+    display: none;
+  }
+  header .sub-title ul.top-line li a {
+    padding: 20px 30px;
+    display: block;
+    font-size: 25px;
+    color: #486284;
+    text-align: center;
+  }
+  header .sub-title ul.top-line li a:hover {
+    color: #000;
+  }
+  header .btn-group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  /* "나의정보" 및 "로그아웃" 버튼은 처음에는 숨김 처리 */
+#mypageButton,
+#logoutButton {
+    display: none;
+}
+
+.button-img{
+    margin-right: 10px;
+  }
+
+/* 서비스정보 카드 */
+.page-name{
+    display: inline-block;
+    font-size: 60px;
+    color:#486284;
+    font-weight:bold;
+    margin: 49px 110px 88px;
+    white-space: nowrap;
+    margin-top: 200px;
+}
+
+
+.block-service{
+    border: 1px solid #ACB1C6;
+    /* margin: auto 169px; */
+    padding: 45px 90px;
+}
+
+.serviceName{
+    font-size: 45px;
+    color:#486284;
+    font-weight:bold;
+}
+
+.service-ex{
+    color: grey;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.tab-btn{
+    width: 50%;
+    text-align: center;
+    color: #486284;
+    font-weight: bold;
+    height: 50px;
+    
+}
+
+#info-tab,
+#review-tab{
+    width: 100%;
+    height: 100%;
+    color: #486284;
+    border: 0;
+}
+
+#info-tab:focus,
+#review-tab:focus{
+    background-color: #F0F4F8;
+    transition: all 0.5s;
+}
+
+#info-tab-pane,
+#review-tab-pane{
+    background-color: #F0F4F8;
+    /* margin: 0 169px; */
+}
+
+.infoBlock{
+    margin-bottom: 30px;
+    padding: 40px 80px;
+    height: 789px;
+    overflow-y: scroll;
+}
+
+.serviceInfo-set{
+    margin: 60px 0;
+}
+
+.tab-titleSet{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tab-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.serviceContent{
+    margin: 10px 48px;
+    font-size: large;
+}
+
+button.btn-review{
+    float: right;
+    border: 1.5px solid #486284;
+    color: #486284;
+}
+
+button.btn-review:hover{
+    background-color: #486284;
+    color: white;
+}
+
+.block-btn{
+    margin-bottom: 20px;
+}
+
+.profile{
+    border-radius: 50%;
+    border: 1px solid gray;
+    width: 46px;
+    height: 46px;
+
+}
+
+div.row-review{
+    padding: 0 60px;
+    margin-bottom: 10px;
+
+}
+
+div.review-card{
+    border: none;
+    box-shadow: 3px 3px 3px rgba(196, 189, 189, 0.3);
+    border-radius: 15px;
+}
+
+.person-name{
+    color: #486284;
+    font-size: 25px;
+    padding-bottom: 6px;
+}
+
+.person{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.review-content{
+    margin: 10px 58px;
+    color: grey;
+}
+
+.write-date{
+    float: right;
+    color: #486284;
+}
+
+/* 목록 버튼 */
+.btn-list{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#list-btn2{
+    width: 100px;
+    background-color: #486284;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* 모달 창 */
+.modal-content{
+    height: 70%;
+}
+
+#staticBackdropLabel{
+    font-weight:500;
+}
+
+div.form-block{
+    height: 200px;
+    margin-top: 20px;
+}
+
+#exampleFormControlTextarea1{
+    height: 100%;
+    background-color: #F0F4F8;
+    font-size: larger;
+}
+
+button.btn-submit{
+    background-color: #486284;
+    width: 40%;
+}
+
+/* 별점 카테고리 */
+.menu-starRate{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.review-menu{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#menu-title1,
+#menu-title2{
+    font-size: 20px;
+    color: #486284;
+}
+
+#menu-title1{
+    margin-right: 20px;
+}
+
+
+/* 별점 */
+.review_rating{
+	clear: both;
+}
+
+.rating{
+	height: 35px;
+	width: 175px;
+	background-color: #f0f0f0;
+}
+
+.rating .rate_radio {
+    position: relative;
+    display: inline-block;
+    z-index: 20;
+    opacity: 0.001;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: top;
+    display: none;
+}
+
+.rating .rate_radio + label {
+    position: relative;
+    display: block;
+    float: left;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    background-image: url(/프론트엔드/image/starrate.png);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    cursor: pointer;
+}
+
+.rating .ratefill {
+    background-color: #486284;
+    width: 0;
+    height: 35px;
+    position: absolute;
+}
+
+.warning_msg {
+    display: none;
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    line-height: 26px;
+    width: 100%;
+    color: red;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+}
+
+/* 컨테이너 */
+.div-container{
+    margin: auto 169px;
+}
+
+/* 셀렉트 박스 */
+.review-select{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.floatingSelect{
+    width: 40%;
+    height: 38px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    color: gray;
+}
+
+.div-search-Service{
+    align-items: center;
+    height: 38px;
+
+}
+
+/* 목록 스크롤 */
+.service-sel{
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.15s;
+}
+
+/* 서비스상자 보여주기 */
+.show-selBox{
+    display: block;
+    overflow-y: scroll;
+    height: 124px;
+}
+
+/* 리뷰 박스 별 */
+.review-stars{
+    margin: 10px 58px;
+}
+
+.menu-starRate,
+ .review-starRate{
+    gap: 3px;
+ }
+
+.review-star{
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.stars{
+    color: #aaa9a9; 
+    position: relative;
+    unicode-bidi: bidi-override;
+    width: max-content;
+    
+} 
+
+.star-fill,
+.star-base{
+    display: flex;
+    align-items: center;
+}
+
+.star-fill{
+    color: #ACB1C6;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: #486284;
+}
+
+
+.star-base{
+    z-index: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+/* 리뷰-서비스명 */
+.review-service{
+    display: flex;
+    border: 1px solid #486284;
+    border-radius: 50px;
+    margin: 10px 58px;
+    width: fit-content;
+    justify-content: center;
+    
+}
+
+button.review-serviceName{
+    color: #486284;
+}
+
+/* 건물 검색 */
+.search-set{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    
+}
+
+.facility-search-sel{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+#sel-region,
+#sel-facility{
+    border: 1.5px solid #486284;
+    border-radius: 0px;
+    padding-top : 18px;
+    padding-bottom: 18px;
+    color: #ACB1C6;
+}
+
+#sel-region{
+    width: 40%;
+}
+
+#sel-facility{
+    width: 60%;
+}
+
+.search-facility,
+#button-addon2{
+    border-radius: 0;
+    border: 7px solid #486284;
+    width: fit-content;
+}
+
+.facility-search-group {
+    height: 58px;
+}
+
+.search-facility{
+    width: 75%;
+}
+
+
+#button-addon2{
+    background-color: #486284;
+    width: 25%;
+}
+
+/* 건물 카드 */
+.div-facility-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 927px;
+    overflow: scroll;
+    gap:17px
+}
+
+.facility-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px 3px  rgba(199, 195, 195, 0.3);
+    padding: 15px 30px;
+
+}
+
+.facility-name{
+    font-weight: bold;
+}
+.facility-type{
+    color: #486284;
+}
+
+a.facility-seeMore{
+    background-color: #E1E8FF;
+    color: #486284;
+    border-radius: 50px;
+    font-weight: 700;
+}

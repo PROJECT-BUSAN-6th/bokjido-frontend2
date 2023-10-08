@@ -1,6 +1,26 @@
-* {
+/* 공통 스타일 */
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
   margin: 0;
   padding: 0;
+}
+a{
+  text-decoration: none;
+}
+img{
+  /* img 하단에 Baseline 공백을 제거 */
+  display: block;
+}
+
+/* 내부 컨테이너 스타일 */
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* 헤더 스타일 */
@@ -58,6 +78,12 @@ header .btn-group {
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+
+/* "나의정보" 및 "로그아웃" 버튼은 처음에는 숨김 처리 */
+#mypageButton,
+#logoutButton {
+    display: none;
 }
 
 .test {
@@ -355,6 +381,70 @@ a {
   border: 0;
   resize: vertical;
 }
+
+/* 댓글 스타일 */
+.comments {
+  margin-top: 30px;
+  border-top: 2px solid #000;
+}
+
+.comments h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.comment {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment strong {
+  font-weight: bold;
+}
+
+.comment p {
+  margin: 5px 0;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comment-form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #333;
+}
+
 
 /* 푸터 */
 

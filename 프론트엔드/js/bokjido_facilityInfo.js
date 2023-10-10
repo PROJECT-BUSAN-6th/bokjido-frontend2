@@ -290,7 +290,7 @@ function addQueryParams(url, params) {
   }
 
 
-//시설 리뷰 조회 함수 //서비스 아이디 나중에 추가
+//시설 리뷰 조회 함수
 function addReview(){
     fetch(`http://localhost:8080/api/facility/review/${facilityInfoId}`
     ,{
@@ -301,11 +301,12 @@ function addReview(){
         }
     })
     .then(response => response.json())
-    .then(data =>{
+    .then(async data =>{
         console.log(data);
         let facilityTemp = "";
-        // const reviewServiceID = searchServiceId(id); //서비스 아이디 불러오기
         for(let i=0; i<data.length; i++){
+            const reviewServiceID = await searchServiceId(data[i].benefitId);
+
             facilityTemp += `<div class="card mb-3 review-card">
                                 <div class="card-body ">
                                     <div class="write-date">
@@ -317,7 +318,7 @@ function addReview(){
                                     </div>
                                     <div class="block-btn review-service">
                                         <button href="" class="btn review-serviceName">
-                                            이용 서비스명
+                                            ${reviewServiceID}
                                         </button>
                                     </div>
                                     <div class="review-stars">
@@ -402,19 +403,18 @@ function addReview(){
 }
 
 //id로 서비스 단일 조회 함수
-function searchServiceId(id){
-    fetch(`http://localhost:8080/api/service/${id}`
-    , {
-        method: "GET",
-        headers: {
-            'Origin': 'http://localhost:8000'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
+async function searchServiceId(id){
+    try{
+        const response = await fetch(`http://localhost:8080/api/service/${id}`, {
+            method: "GET",
+            headers: {
+                'Origin': 'http://localhost:8000'
+            }
+        });
+        const data = await response.json();
         return data.name;
-    })  
-    .catch(error => {
+    }
+    catch (error) {
         console.log(error);
-    })
+    }
 }

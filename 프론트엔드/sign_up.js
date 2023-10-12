@@ -1,3 +1,107 @@
+// Enum 값 정의
+const HouseholdSituationCategory = {
+    LOW_INCOME: 'LOW_INCOME',
+    DISABLED: 'DISABLED',
+    SINGLE_PARENT_OR_GRANDSON: 'SINGLE_PARENT_OR_GRANDSON',
+    MULTIPLE_CHILDREN: 'MULTIPLE_CHILDREN',
+    MULTICULTURAL: 'MULTICULTURAL',
+    NORTH_KOREAN_DEFECTORS: 'NORTH_KOREAN_DEFECTORS',
+    VETERANS: 'VETERANS'
+    // 다른 카테고리들도 추가
+  };
+  
+  const interest = {
+    PHYSICAL_HEALTH: document.getElementById('interest1').value,
+    LIFE_SUPPORT: document.getElementById('interest2').value,
+    JOB: document.getElementById('interest3').value,
+    SAFETY_OR_CRISIS: document.getElementById('interest4').value,
+    CHILDCARE: document.getElementById('interest5').value,
+    ADOPTION_OR_FOSTER: document.getElementById('interest6').value,
+    MICROFINANCE: document.getElementById('interest7').value,
+    MENTAL_HEALTH: document.getElementById('interest8').value,
+    DWELLING: document.getElementById('interest9').value,
+    CULTURE_OR_LEISURE: document.getElementById('interest10').value,
+    PREGNANCY_OR_CHILDBIRTH: document.getElementById('interest11').value,
+    EDUCATION: document.getElementById('interest12').value,
+    PROTECTION_OR_CARE: document.getElementById('interest13').value,
+    LAW: document.getElementById('interest14').value
+    // 다른 카테고리들도 추가
+  };
+  
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnJoin = document.getElementById('btnJoin'); // 가입하기 버튼의 ID를 지정하세요.
+
+    
+    
+
+    btnJoin.addEventListener('click', () => {
+        let selectElement = document.getElementById('House');
+        console.log(selectElement)
+
+
+        const selectedInterests = [];
+
+    // 'interest' 체크박스 요소들을 선택합니다.
+    const interestCheckboxes = document.querySelectorAll('.check');
+
+    // 각 체크박스를 반복하면서 선택된 것들을 배열에 추가합니다.
+    interestCheckboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            selectedInterests.push(checkbox.value);
+        }
+    });
+
+    
+        
+      // 사용자가 입력한 회원가입 정보를 수집합니다.
+      const content = {
+        userid: document.getElementById('userid').value,
+        password: document.getElementById('password').value,
+        username: document.getElementById('username').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        birth: document.getElementById('yy').value + '-' + document.getElementById('mm').value + '-' + document.getElementById('dd').value,
+        gender: gender.value,
+        address: document.getElementById('sample4_postcode').value + ' ' + document.getElementById('sample4_roadAddress').value + ' ' + document.getElementById('sample4_jibunAddress').value + ' ' + document.getElementById('sample4_extraAddress').value,
+        HouseholdSituationCategory: selectElement.options[selectElement.selectedIndex].value,
+        InterestTopicCategory: selectedInterests
+      };
+      console.log(selectedInterests);
+  console.log(content)
+      // 회원가입 API 호출
+      fetch('http://localhost:8080/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Origin': 'http://localhost:5501'
+        },
+        body: JSON.stringify(content)
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('API 요청이 실패했습니다.');
+          }
+          return response.json(); // 응답 데이터를 JSON으로 파싱
+        })
+        .then(data => {
+          // 회원가입 성공 시의 처리
+          console.log('회원가입 성공!', data);
+  
+          // 회원가입 성공 후 로그인 페이지로 이동 // 로그인 페이지의 경로를 적절하게 수정하세요.
+          window.location.href = 'sign_in.html';
+        })
+        .catch(error => {
+          // 회원가입 실패 또는 오류 처리
+          console.log('회원가입 오류:', error);
+          alert('이미 존재하는 회원입니다.');
+  
+          // 실패한 경우 사용자에게 메시지를 표시하거나 다른 작업을 수행하세요.
+        });
+    });
+  });
+  
+
 //주소 메서드
 function sample4_execDaumPostcode() {
   new daum.Postcode({

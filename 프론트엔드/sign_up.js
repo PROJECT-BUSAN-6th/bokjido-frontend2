@@ -27,6 +27,11 @@ const HouseholdSituationCategory = {
     LAW: document.getElementById('interest14').value
     // 다른 카테고리들도 추가
   };
+
+  const Gender = {
+    남: '남',
+    여: '여'
+  };
   
   
   document.addEventListener('DOMContentLoaded', function () {
@@ -38,6 +43,9 @@ const HouseholdSituationCategory = {
     btnJoin.addEventListener('click', () => {
         let selectElement = document.getElementById('House');
         console.log(selectElement)
+
+        let genderselect = document.getElementById('gender');
+        console.log(genderselect)
 
 
         const selectedInterests = [];
@@ -62,7 +70,7 @@ const HouseholdSituationCategory = {
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
         birth: document.getElementById('yy').value + '-' + document.getElementById('mm').value + '-' + document.getElementById('dd').value,
-        gender: gender.value,
+        Gender: genderselect.options[genderselect.selectedIndex].value,
         address: document.getElementById('sample4_postcode').value + ' ' + document.getElementById('sample4_roadAddress').value + ' ' + document.getElementById('sample4_jibunAddress').value + ' ' + document.getElementById('sample4_extraAddress').value,
         HouseholdSituationCategory: selectElement.options[selectElement.selectedIndex].value,
         InterestTopicCategory: selectedInterests
